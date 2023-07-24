@@ -1,5 +1,6 @@
 const fs = require('node:fs')
 const { join } = require('node:path')
+const process = require('node:process')
 const basic = require('@luctaurus/eslint-config-basic')
 
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.eslint.json'
@@ -49,15 +50,6 @@ module.exports = {
             '@typescript-eslint/restrict-plus-operands': 'error',
             '@typescript-eslint/restrict-template-expressions': 'error',
             '@typescript-eslint/unbound-method': 'error',
-          },
-        }, {
-          // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
-          files: ['**/__tests__/**/*.ts', '**/*.spec.ts', '**/*.test.ts'],
-          plugins: ['jest'],
-          rules: {
-            // you should turn the original rule off *only* for test files
-            '@typescript-eslint/unbound-method': 'off',
-            'jest/unbound-method': 'error',
           },
         }],
   ),
@@ -154,12 +146,6 @@ module.exports = {
     '@typescript-eslint/no-loss-of-precision': 'error',
     'lines-between-class-members': 'off',
     '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-
-    // antfu
-    // 'antfu/generic-spacing': 'error',
-    // 'antfu/no-cjs-exports': 'error',
-    // 'antfu/no-ts-export-equal': 'error',
-    // 'antfu/no-const-enum': 'error',
 
     // off
     '@typescript-eslint/consistent-indexed-object-style': 'off',

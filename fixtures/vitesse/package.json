@@ -26,9 +26,9 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@luctaurus/eslint-config": "^0.39.6",
     "@iconify-json/carbon": "^1.1.18",
     "@intlify/vite-plugin-vue-i18n": "^7.0.0",
+    "@luctaurus/eslint-config": "^0.39.6",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^4.2.3",

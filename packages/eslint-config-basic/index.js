@@ -10,8 +10,6 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
-    'plugin:yml/standard',
-    'plugin:markdown/recommended',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -49,7 +47,6 @@ module.exports = {
     'html',
     'unicorn',
     'luctaurus',
-    'no-only-tests',
     'unused-imports',
   ],
   settings: {
@@ -71,13 +68,6 @@ module.exports = {
         'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
         'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
-      },
-    },
-    {
-      files: ['*.yaml', '*.yml'],
-      parser: 'yaml-eslint-parser',
-      rules: {
-        'spaced-comment': 'off',
       },
     },
     {
@@ -175,13 +165,6 @@ module.exports = {
       },
     },
     {
-      files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
-      rules: {
-        'no-unused-expressions': 'off',
-        'no-only-tests/no-only-tests': 'error',
-      },
-    },
-    {
       // Code blocks in markdown file
       files: ['**/*.md/*.*'],
       rules: {
@@ -202,8 +185,6 @@ module.exports = {
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
-        // 'antfu/no-cjs-exports': 'off',
-        // 'antfu/no-ts-export-equal': 'off',
       },
     },
   ],
@@ -389,14 +370,5 @@ module.exports = {
       },
     ],
 
-    // yml
-    'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
-    'yml/no-empty-document': 'off',
-
-    // antfu
-    // 'antfu/if-newline': 'error',
-    // 'antfu/import-dedupe': 'error',
-    // 'antfu/top-level-function': 'error',
-    // 'antfu/prefer-inline-type-import': 'error',
   },
 }
