@@ -6,6 +6,7 @@
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "vitest",
@@ -28,7 +29,7 @@
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.18",
     "@intlify/vite-plugin-vue-i18n": "^7.0.0",
-    "@luctaurus/eslint-config": "^0.39.6",
+    "@luctaurus/eslint-config-vue": "workspace:*",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^4.2.3",
